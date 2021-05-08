@@ -54,9 +54,7 @@ CREATE TABLE "titles" (
 );
 
 
-ALTER TABLE employees
-ALTER COLUMN hire_date SET DATA TYPE date
-      USING to_date(hire_date, 'mm/dd/yyyy');
+
 
 ALTER TABLE "dept_emp" ADD CONSTRAINT "fk_dept_emp_empo_no" FOREIGN KEY("empo_no")
 REFERENCES "employees" ("emp_no");
