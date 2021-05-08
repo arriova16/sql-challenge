@@ -22,6 +22,7 @@ CREATE TABLE "dept_manager" (
         "emp_no"
      )
 );
+drop table employees
 
 CREATE TABLE "employees" (
     "emp_no" varchar   NOT NULL,
@@ -30,7 +31,7 @@ CREATE TABLE "employees" (
     "first_name" varchar   NOT NULL,
     "last_name" varchar   NOT NULL,
     "sex" varchar   NOT NULL,
-    "hire_date" varchar   NOT NULL,
+    "hire_date" date   NOT NULL,
     CONSTRAINT "pk_employees" PRIMARY KEY (
         "emp_no"
      )
@@ -51,6 +52,9 @@ CREATE TABLE "titles" (
         "title_id"
      )
 );
+
+
+
 
 ALTER TABLE "dept_emp" ADD CONSTRAINT "fk_dept_emp_empo_no" FOREIGN KEY("empo_no")
 REFERENCES "employees" ("emp_no");
